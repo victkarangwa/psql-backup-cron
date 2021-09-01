@@ -27,7 +27,6 @@ const backupDB = () => {
   const job = schedule.scheduleJob("0 0 0 * * 5", function () {
     console.log("-------Backup DB-----------");
 
-    // cron job
     const { DB_USER, HOST, DB_NAME, FILE_NAME, DB_PASSWD } = process.env;
 
     if (DB_USER && HOST && DB_NAME && FILE_NAME && DB_PASSWD) {
